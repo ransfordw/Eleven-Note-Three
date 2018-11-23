@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    public class NoteListItem
+    public class NoteCreate
     {
-        public int NoteId { get; set; }
+        [Required]
         public string Title { get; set; }
-
-        [Display(Name="Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
+        public string Content { get; set; }
 
         public override string ToString() => Title;
     }
